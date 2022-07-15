@@ -1,4 +1,3 @@
-import os
 n = 0
 pontuacaoplayer1 = 0
 pontuacaoplayer2 = 0
@@ -10,11 +9,7 @@ def jogador2 ():
 while n < 3:
     n += 1
     escolhaplayer1 = str(input('Jogador 1 suavez: '))
-    os.system('clear') or None
     escolhaplayer2 = str(input('Jogador 2 sua vez: '))
-    os.system('clear') or None
-    print(f'A opção escolhida pelo jogaddor 1 foi {escolhaplayer1}')
-    print(f'A opção escolhida pelo jogador 2 foi {escolhaplayer2} ')
 
     if escolhaplayer1 == "pedra":
         if escolhaplayer2 == "tesoura":
