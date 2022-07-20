@@ -2,23 +2,46 @@ import random
 
 def acertou():
     print('Pc acertou \n')
-def errou():
-    print('Pc errou \n') 
+def empataram():
+    print('Ambos empataram')
+def acertouai():
+    print('A.I acertou')      
 
 jogos = ["pedra", "papel", "tesoura"]
 n = 0
-pontuacao = 0
+pontuacaopc = 0
+pontuacaoai = 0
 while n < 3:
     n += 1
-    resultadochoiche = random.choice(jogos)
+    resultadoai = random.choice(jogos)
     resultadopc = random.choice(jogos)
-    print(f'O iten sorteado foi {resultadochoiche}')
+    print(f'O iten sorteado foi {resultadoai}')
     print(f'O resultado sorteado pelo pc foi {resultadopc}')
 
-    if resultadochoiche == resultadopc:
-        acertou()
-        pontuacao +=1
-    elif resultadochoiche != resultadopc:
-        errou()
+    if resultadopc == resultadoai:
+        empataram()
+    if resultadopc == "pedra":
+        if resultadoai == "tesoura":
+            acertou()
+            pontuacaopc += 1
+    if resultadopc == "tesoura":
+        if resultadoai == "papel":
+            acertou()
+            pontuacaopc += 1
+    if resultadopc == "papel":
+        if resultadoai == "pedra":
+            acertou()
+            pontuacaopc += 1
 
-print(f'Pontuação final\n De {n} o pc acertou {pontuacao}')        
+    if resultadoai == "pedra":
+        if resultadopc == "tesoura":
+            acertouai()
+            pontuacaoai +=1
+    if resultadoai == "tesoura":
+        if resultadopc == "papel":
+            acertouai()
+            pontuacaoai +=1
+    if resultadoai == "papel":
+        if resultadopc == "pedra":
+            acertouai()    
+            pontuacaoai +=1            
