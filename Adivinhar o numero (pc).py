@@ -1,20 +1,18 @@
 import random
 
-n = 0
-pontuacaopc = 0
-pontuacaoimp = 0
-
 def errou():
     print('PC errou')
     print('-' * 20)
-
 def acertou():
     print('PC acertou')
     print('-' * 20)
-
 def empatou():
     print('Ambos empataram')
     print('-' * 20)
+
+n = 0
+pontuacaopc = 0
+pontuacaoimp = 0
 
 #* Gerador de numeros
 while n < 5:
@@ -43,11 +41,9 @@ while n < 5:
         errou()
         pontuacaoimp += 1
 
-print(f'\n\033[42m' + '\033[1m' + '\033[33m' + '\nPontuação total' +
-      '\033[0;0m')
+print(f'\n\033[42m' + '\033[1m' + '\033[33m' + '\nPontuação total' +'\033[0;0m')
 print(f'PC: {pontuacaopc} pontos\nA.I: {pontuacaoimp} pontos\n')
 if pontuacaoimp > pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'A.I' +
-          '\033[0;0m')
+    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'A.I' +'\033[0;0m')
 elif pontuacaoimp < pontuacaopc:
     print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'PC' + '\033[0;0m')

@@ -1,14 +1,15 @@
 import random
 
-lower_case = "abcdefghijklmnopqrstuvwxyz"
-upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-number = "0123456789"
-symbols = "@#$%&*/\?"
+letras_minusculas = "abcdefghijklmnopqrstuvwxyz"
+letras_maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numeros = "0123456789"
+simbolos = "@#$%&*/\?"
 n = 0
 
-while n < 10:
+while n < 5:
     n += 1
-    Use_for = lower_case + upper_case + number + symbols
-    length_for_pass = 10
-    password = "".join(random.sample(Use_for, length_for_pass))
-    print(f'Sua password nova é {password} \n')
+    juntar = letras_minusculas + letras_maiusculas + numeros + simbolos
+    quantidade_de_caracteres = 10
+    password = "".join(random.sample(juntar, quantidade_de_caracteres))
+    print(f'Sua password nova é {password}')
+    print("-" * 30)
