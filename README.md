@@ -1,9 +1,13 @@
 # Desafio para Iniciantes Python  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
 
 Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.org/portuguese/news/25-projetos-em-python-para-iniciantes-ideias-faceis-para-comecar-a-programar-em-python/)
- - Qual quer bug encontrado no script deve ser reportado no Pull requests
- - Todos os projetos que não foram postados no github serão postados devagar
+ - Qual quer bug encontrado deve reportar o mais rapido possivel
+ - Os scripts que não foram feitos serão postados aos poucos
  
+## Sistemas Operativos usados:
+ - Windows 10
+ - Linux (Debian)
+
 ## Material usados:
  - Visual Studio Code
  - Colab

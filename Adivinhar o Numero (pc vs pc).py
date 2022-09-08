@@ -1,47 +1,38 @@
 import random as rd
 
 
-def pontopc():
-    print('PC não certou o numero gerado')
-    print('-' * 20)
+n = 0
+questoescertas = 0
+questoeserradas = 0
 
+def certo():
+    print(f'Numero do código --> {codigo}')
+    print(f'Numero da A.I --> {ai}')
+    print('\033[32m' + 'A.I conseguiu acertar o numero\n' + '\033[0m')
+    global questoescertas
+    questoescertas += 1
 
-def acertou():
-    print('PC conseguiu acertar o numero')
-    print('-' * 20)
-
-
-def numeros():
-    print(f'Numero gerado pelo codigo foi {numpc}')
-    print(f'Numero gerado pelo PC foi {numpc2} \n')
-
+def errado():
+    print(f'Numero do código --> {codigo}')
+    print(f'Numero da A.I --> {ai}')
+    print('\033[31m' + 'A.I não consegui acertar o numero\n' + '\033[0m')    
 
 def pontuacao():
-    print(f'\n\033[42m' + '\033[1m' + '\033[33m' + '\nPontuação total' +
-          '\033[0;0m')
-    print(f'PC: {pontuacaopc} pontos\nA.I: {pontuacaopc2} pontos\n')
+    print('\033[93m' + '\nPontuação Final' + '\033[0m')
+    global questoeserradas
+    questoeserradas = 5 - questoescertas
+    print('A A.I acertou ' + '\033[32m' + f'{questoescertas}' + '\033[0m' + ' numeros')
+    print('A A.I errou ' + '\033[31m' + f'{questoeserradas}' + '\033[0m' + ' numeros')
 
-
-n = 0
-nwhl = 5
-pontuacaopc = 0
-pontuacaopc2 = 0
-
-while n < nwhl:
+while n < 5:
     n += 1
-    numpc = int(rd.uniform(0, 10))
-    numpc2 = int(rd.uniform(0, 10))
-    numeros()
-    if numpc == numpc2:
-        acertou()
-        pontuacaopc2 += 1
-    elif numpc != numpc2:
-        pontopc()
-        pontuacaopc += 1
+
+    codigo = int(rd.uniform(0, 10))
+    ai = int(rd.uniform(0, 10))
+
+    if codigo == ai:
+        certo()
+    else:
+        errado()
 
 pontuacao()
-if pontuacaopc2 > pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'Código' +
-          '\033[0;0m')
-elif pontuacaopc2 < pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'PC' + '\033[0;0m')

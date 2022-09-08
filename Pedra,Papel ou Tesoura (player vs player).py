@@ -1,53 +1,56 @@
-def jg1():
-    print(f'{player1} marca ponto \n')
-def jg2():
-    print(f'{player2} marca ponto \n')
+import os
 
 n = 0
-pontuacaoplayer1 = 0
-pontuacaoplayer2 = 0
+pontuacaojogador1 = 0
+pontuacaojogador2 = 0
 
-player1 = str(input('Insira o nome do primeiro jogador: '))
-player2 = str(input('Insira o nome do segundo jogador: '))
+def empate():
+    print(f'\nJogador 1 escolheu {jogadajogador1}\nJogador 2 escolheu {jogadajogador2}')
+    print('\033[94m' + 'Houve um empate\n' + '\033[0m')
+
+def jogador1():
+    print(f'\nJogador 1 escolheu {jogadajogador1}\nJogador 2 escolheu {jogadajogador2}')
+    print('\033[32m' + 'Ponto para Jogador 1\n' + '\033[0m')
+    pontuacaojogador1 += 1  
+
+def jogador2():
+    print(f'\nJogador 1 escolheu {jogadajogador1}\nJogador 2 escolheu {jogadajogador2}')
+    print('\033[32m' + 'Ponto para Jogador 2\n' + '\033[0m')
+    pontuacaojogador2 += 1            
 
 while n < 3:
     n += 1
-    escolhaplayer1 = str(input(f'\n{player1} sua vez: '))
-    escolhaplayer2 = str(input(f'{player2} sua vez: '))
 
-    if escolhaplayer1 == "pedra":
-        if escolhaplayer2 == "tesoura":
-            jg1()
-            pontuacaoplayer1 += 1
+    jogadajogador1 = str(input('Sua vez de jogar jogador 1: '))
+    os.system('clear')
+    jogadajogador2 = str(input('Sua vez de jogar jogador 2: '))
+    os.system('clear')
 
-    if escolhaplayer1 == "tesoura":
-        if escolhaplayer2 == "papel":
-            jg1()
-            pontuacaoplayer1 += 1
+    #Verificar se e igual
+    if jogadajogador1 == jogadajogador2:
+        empate()
 
-    if escolhaplayer1 == "papel":
-        if escolhaplayer2 == "pedra":
-            jg1()
-            pontuacaoplayer1 += 1
+    #Teste ao var jogadajogador1
+    if jogadajogador1 == "pedra":
+        if jogadajogador2 == "tesoura":
+            jogador1()
+    if jogadajogador1 == "tesoura":
+        if jogadajogador2 == "papel":
+            jogador1()
+    if jogadajogador1 == "papel":
+        if jogadajogador2 == "pedra":
+            jogador1() 
 
-    if escolhaplayer2 == "pedra":
-        if escolhaplayer1 == "tesoura":
-            jg2()
-            pontuacaoplayer2 += 1
+    #Teste ao var jogadajogador2
+    if jogadajogador2 == "pedra":
+        if jogadajogador1 == "tesoura":
+            jogador2()
+    if jogadajogador2 == "tesoura":
+        if jogadajogador1 == "papel":
+            jogador2()
+    if jogadajogador2 == "papel":
+        if jogadajogador1 == "pedra":
+            jogador2()
 
-    if escolhaplayer2 == "tesoura":
-        if escolhaplayer1 == "papel":
-            jg2()
-            pontuacaoplayer2 += 1
-
-    if escolhaplayer2 == "papel":
-        if escolhaplayer1 == "pedra":
-            jg2()
-            pontuacaoplayer2 += 1
-
-print(f'\n\033[42m' + '\033[1m' + '\033[33m' + '\nPontuação total' +'\033[0;0m')
-print(f'{player1}: {pontuacaoplayer1} pontos\n{player2}: {pontuacaoplayer2} pontos\n')
-if pontuacaoplayer1 > pontuacaoplayer2:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + f'{player1}' +'\033[0;0m')
-elif pontuacaoplayer1 < pontuacaoplayer2:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + f'{player2}' +'\033[0;0m')
+print('\033[93m' + '\nPontuação Final' + '\033[0m')
+print(f'Jogador 1 marcou {pontuacaojogador1} pontos\nJogador 2 marcou {pontuacaojogador2} pontos')             

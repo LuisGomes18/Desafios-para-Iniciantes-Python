@@ -1,49 +1,38 @@
 import random as rd
 
 
-def pontocodigo():
-    print('Usuario falhou ponto para o PC')
-    print('-' * 20)
+n = 0
+questoescertas = 0
+questoeserradas = 0
 
+def certo():
+    print(f'Numero do usuario --> {numerousuario}')
+    print(f'Numero da A.I --> {ai}')
+    print('\033[32m' + 'Voce conseguiu acertar o numero\n' + '\033[0m')
+    global questoescertas
+    questoescertas += 1
 
-def pontousuario():
-    print('Usuario acertou')
-    print('-' * 20)
-
-
-def numeros():
-    print(f'\nNumero gerado pelo código foi {numgr}')
-    print(f'Numero escolhido pelo Usuario foi {numusuario}')
-
+def errado():
+    print(f'Numero do usuario --> {numerousuario}')
+    print(f'Numero da A.I --> {ai}')
+    print('\033[31m' + 'Voce não consegui acertar o numero\n' + '\033[0m')    
 
 def pontuacao():
-    print(f'\n\033[42m' + '\033[1m' + '\033[33m' + '\nPontuação total' +
-          '\033[0;0m')
-    print(f'Usuario: {pontuacaopc} pontos\nA.I: {pontuacaopc} pontos\n')
+    print('\033[93m' + '\nPontuação Final' + '\033[0m')
+    global questoeserradas
+    questoeserradas = 5 - questoescertas
+    print('Voce acertou ' + '\033[32m' + f'{questoescertas}' + '\033[0m' + ' numeros')
+    print('Voce errou ' + '\033[31m' + f'{questoeserradas}' + '\033[0m' + ' numeros')
 
-
-n = 0
-nwhl = 5
-pontuacaopc = 0
-pontuacaousuario = 0
-
-while n < nwhl:
+while n < 5:
     n += 1
-    numusuario = int(input('Digite um numero entre 0 é 10: '))
-    numgr = int(rd.uniform(0, 10))
-    numeros()
-    if numusuario == numgr:
-        pontocodigo()
-    elif numusuario != numgr:
-        pontousuario()
-        pontuacaousuario = +1
+
+    numerousuario = int(input('Insira o numero entre 0 e 10: '))
+    ai = int(rd.uniform(0, 10))
+
+    if numerousuario == ai:
+        certo()
+    else:
+        errado()
 
 pontuacao()
-if pontuacaousuario == pontuacaopc:
-    print('Ambos ' + '\u001b[33m' + '\033[1m' + 'empataram' + '\033[0;0m')
-elif pontuacaousuario > pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'Código' +
-          '\033[0;0m')
-elif pontuacaousuario < pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'Usario' +
-          '\033[0;0m')

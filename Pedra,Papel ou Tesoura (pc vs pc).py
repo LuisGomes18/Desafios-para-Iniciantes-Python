@@ -1,55 +1,77 @@
 import random as rd
 
-def acertou():
-    print('Pc acertou \n')
-def empataram():
-    print('Ambos empataram \n')
-def acertouai():
-    print('A.I acertou \n')
 
-jogos = ["pedra", "papel", "tesoura"]
+escolha = ["pedra", "papel", "tesoura"]
 n = 0
-pontuacaopc = 0
 pontuacaoai = 0
+questoeserradas = 0
+empates = 0
+
+def empate():
+    print(f'A.I escolheu {resulai}\nCódigo escolheu {resulcodigo}')
+    print('\033[94m' + 'Houve um empate\n' + '\033[0m')
+    global empates
+    empates += 1
+
+def certo():
+    print(f'A.I escolheu {resulai}\nCódigo escolheu {resulcodigo}')
+    print('\033[32m' + 'Ponto para A.I\n' + '\033[0m')
+    global pontuacaoai
+    pontuacaoai += 1 
+
+def errado():
+    print(f'A.I escolheu {resulai}\nCódigo escolheu {resulcodigo}')
+    print('\033[31m' + 'Ponto para Código\n' + '\033[0m')
+    global questoeserradas
+    questoeserradas += 1
 
 while n < 3:
+
     n += 1
-    resultadoai = rd.choice(jogos)
-    resultadopc = rd.choice(jogos)
-    print(f'O iten sorteado foi {resultadoai}')
-    print(f'O resultado sorteado pelo pc foi {resultadopc}')
 
-    if resultadopc == resultadoai:
-        empataram()   
-    if resultadopc == "pedra":
-        if resultadoai == "tesoura":
-            acertou()
-            pontuacaopc += 1     
-    if resultadopc == "tesoura":
-        if resultadoai == "papel":
-            acertou()
-            pontuacaopc += 1
-    if resultadopc == "papel":
-        if resultadoai == "pedra":
-            acertou()
-            pontuacaopc += 1
+    resulcodigo = rd.choice(escolha)
+    resulai = rd.choice(escolha)
 
-    if resultadoai == "pedra":
-        if resultadopc == "tesoura":
-            acertouai()
-            pontuacaoai += 1
-    if resultadoai == "tesoura":
-        if resultadopc == "papel":
-            acertouai()
-            pontuacaoai += 1
-    if resultadoai == "papel":
-        if resultadopc == "pedra":
-            acertouai()
-            pontuacaoai += 1
+    #Verificar se e igual
+    if resulai == resulcodigo:
+        empate()
 
-print(f'\033[42m' + '\033[1m' + '\033[33m' + '\nPontuação total' + '\033[0;0m')
-print(f'PC: {pontuacaopc} pontos\nA.I: {pontuacaoai} pontos\n')
-if pontuacaoai > pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'A.I' +'\033[0;0m')
-elif pontuacaoai < pontuacaopc:
-    print('Quem ganhou foi o ' + '\u001b[33m' + '\033[1m' + 'PC' + '\033[0;0m')
+    #Teste ao var resulai
+    if resulai == "pedra":
+        if resulcodigo == "tesoura":
+            certo()
+    if resulai == "tesoura":
+        if resulcodigo == "papel":
+            certo() 
+    if resulai == "papel":
+        if resulcodigo == "pedra":
+            certo()
+
+    #Teste ao var resulcodigo
+    if resulcodigo == "pedra":
+        if resulai == "tesoura":
+            errado()
+    if resulcodigo == "tesoura":
+        if resulai == "papel":
+            errado()
+    if resulcodigo == "papel":
+        if resulai == "pedra":
+            errado()                                                          
+
+print('\033[93m' + '\nPontuação Final' + '\033[0m')
+if empates >= 1:  
+    if pontuacaoai == 1:
+        print('A A.I acertou ' + '\033[32m' + f'{pontuacaoai}' + '\033[0m' + ' vez')
+    else:     
+        print('A A.I acertou ' + '\033[32m' + f'{pontuacaoai}' + '\033[0m' + ' vezes')
+    if questoeserradas == 1:
+        print('Errou ' + '\033[31m' + f'{questoeserradas}' + '\033[0m' + ' vez')
+    else:     
+        print('Errou ' + '\033[31m' + f'{questoeserradas}' + '\033[0m' + ' vezes')  
+    if empates == 1:
+        print('E empatou ' + '\033[96m' + f'{empates}' + '\033[0m'+ ' vez')
+    else:    
+        print('E empatou ' + '\033[96m' + f'{empates}' + '\033[0m'+ ' vezes')
+else:
+    print('A A.I acertou ' + '\033[32m' + f'{pontuacaoai}' + '\033[0m' + ' vezes')
+    print('Errou ' + '\033[31m' + f'{questoeserradas}' + '\033[0m' + ' vezes') 
