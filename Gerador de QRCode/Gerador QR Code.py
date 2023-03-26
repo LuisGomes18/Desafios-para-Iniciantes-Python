@@ -1,5 +1,6 @@
 import qrcode
-#Preciso adicionar o "import os"
+
+# Preciso adicionar o "import os"
 
 link_texto = str(input('Insira o site/texto que quer: '))
 print('Site/texto gravado \n')
@@ -7,7 +8,9 @@ print('Site/texto gravado \n')
 nome_ficheiro = str(input('Insira o nome do arquivo: '))
 print('Nome do arquivo gravado \n')
 
-tipo_imagem = int(input('Insira  qual tipo de imagem: \n1 --> Para ficheiros "png" \n2 --> Para ficheiros "jpeg" \n3 --> Para ficheiros "jpg"\n--> '))
+tipo_imagem = int(input(
+    'Insira  qual tipo de imagem: \n1 --> Para ficheiros "png" \n2 --> Para ficheiros "jpeg" \n3 --> Para ficheiros '
+    '"jpg"\n--> '))
 print('Tipo de imagem gravado')
 
 formato_imagem = ""
