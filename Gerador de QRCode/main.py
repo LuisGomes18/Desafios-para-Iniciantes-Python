@@ -1,5 +1,11 @@
 import qrcode
 import shutil
+import os
+
+diretorio = 'Fotos'
+
+if not os.path.exists(diretorio):
+    os.makedirs(diretorio)
 
 texto = str(input('Escreva o site/texto: '))
 nome_ficherio = str(input('\nQual sera o nome da foto: '))

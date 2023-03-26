@@ -1,3 +1,4 @@
+import os
 from os import mkdir
 from shutil import rmtree
 from string import ascii_letters
@@ -6,6 +7,11 @@ from random import sample
 import qrcode
 from shutil import move
 
+diretorio = 'Fotos'
+
+if not os.path.exists(diretorio):
+    os.makedirs(diretorio)
+
 simbolos = '!#$%&()*+,-./:;<=>?@[\]^_{|}~'
 n = 0
 quantcatr = 12
@@ -13,6 +19,7 @@ nome_ficheiro = ""
 caminho_final = '/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador de Passwords/Fotos/'
 rmtree('/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador de Passwords/Fotos')
 mkdir('Fotos')
+
 while n < 5:
     n += 1
     juncao = ascii_letters + digits + simbolos
