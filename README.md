@@ -5,22 +5,22 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
  - Os scripts que não foram feitos serão postados aos poucos
  
 ## Sistemas Operativos usados:
- - Windows 10
- - Linux (Debian)
+ - Linux
 
 ## Material usados:
- - Visual Studio Code
+ - ~~Visual Studio Code~~
+ - Pycharm
  - Colab
 
 ## Lista dos desafios
 
 - [ ] Projeto de Mad Libs em Python
-- [x] Projeto do jogo Adivinhe o Número em Python (computador)
-- [x] Projeto do jogo Adivinhe o Número em Python (usuário)
-- [x] Projeto em Python de Pedra, papel e tesoura
+- [ ] Projeto do jogo Adivinhe o Número em Python (computador)
+- [ ] Projeto do jogo Adivinhe o Número em Python (usuário)
+- [ ] Projeto em Python de Pedra, papel e tesoura
 - [ ] Projeto em Python do jogo da Forca
 - [ ] Projeto em Python de contagem regressiva
-- [x] Projeto em Python de geração de senhas
+- [ ] Projeto em Python de geração de senhas
 - [ ] Projeto em Python de codificador/decodificador de QR code
 - [ ] Projeto em Python de Jogo da Velha
 - [ ] Projeto em Python de Jogo da Velha com IA
