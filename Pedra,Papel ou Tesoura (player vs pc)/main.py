@@ -20,19 +20,16 @@ def ponto_usuario():
     print(amarelo + 'Ponto do Usuario\n'+ original)
     ponto_Usuario += 1
 
-while n < 5:
+while n < 3:
     movimento_AI_1 = str(choice(acoes_permitidas))
-    print(movimento_AI_1)
     while movimento_AI_1 == ultimo_movimento_AI:
         movimento_AI_1 = str(choice(acoes_permitidas))
-        print(movimento_AI_1)
     movimento_Usuario = input('Escolha qual opcao (pedra, papel, tesoura): ')
     movimento_Usuario.lower()
     while movimento_Usuario not in acoes_permitidas:
         movimento_Usuario = input('Escolha qual opcao (pedra, papel, tesoura): ')
         movimento_Usuario.lower()
         movimento_AI_1 = str(choice(acoes_permitidas))
-        print(movimento_AI_1)
     print(f'AI 1 escolheu {movimento_AI_1}\nUsuario escolheu {movimento_Usuario}')
     if movimento_AI_1 == movimento_Usuario:
         print(amarelo + 'Empatou\n' + original)
