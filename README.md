@@ -17,7 +17,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto de Mad Libs em Python
 - [x] Projeto do jogo Adivinhe o Número em Python (computador)
 - [x] Projeto do jogo Adivinhe o Número em Python (usuário)
-- [x] Projeto em Python de Pedra, papel e tesoura
+- [x] Projeto em Python de Pedra, papel e tesoura (player contra player não sera finalizado ainda)
 - [ ] Projeto em Python do jogo da Forca
 - [ ] Projeto em Python de contagem regressiva
 - [x] Projeto em Python de geração de senhas
