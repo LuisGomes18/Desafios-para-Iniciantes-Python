@@ -15,13 +15,13 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 ## Lista dos desafios
 
 - [ ] Projeto de Mad Libs em Python
-- [ ] Projeto do jogo Adivinhe o Número em Python (computador)
-- [ ] Projeto do jogo Adivinhe o Número em Python (usuário)
-- [ ] Projeto em Python de Pedra, papel e tesoura
+- [x] Projeto do jogo Adivinhe o Número em Python (computador)
+- [x] Projeto do jogo Adivinhe o Número em Python (usuário)
+- [x] Projeto em Python de Pedra, papel e tesoura
 - [ ] Projeto em Python do jogo da Forca
 - [ ] Projeto em Python de contagem regressiva
-- [ ] Projeto em Python de geração de senhas
-- [ ] Projeto em Python de codificador/decodificador de QR code
+- [x] Projeto em Python de geração de senhas
+- [x] Projeto em Python de codificador/decodificador de QR code
 - [ ] Projeto em Python de Jogo da Velha
 - [ ] Projeto em Python de Jogo da Velha com IA
 - [ ] Projeto em Python de pesquisa binária
