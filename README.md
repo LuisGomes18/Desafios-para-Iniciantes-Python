@@ -31,7 +31,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de renomeador de arquivos em massa
 - [ ] Projeto em Python de previsão do tempo
 - [ ] Programar um bot do Discord com Python e hospedá-lo gratuitamente na nuvem
-- [ ] Projeto jogo de cara ou coroa
+- [x] Projeto jogo de cara ou coroa (player contra player não sera finalizado ainda)
 - [ ] Projeto de chatbot (perguntas e ajudar em tarefas)
 - [ ] Projeto de advinhação (objetos, cores e etc)
 - [ ] Upgrade do projeto das passwords e criar um gereciamento para as passwords
