@@ -31,6 +31,10 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de renomeador de arquivos em massa
 - [ ] Projeto em Python de previsão do tempo
 - [ ] Programar um bot do Discord com Python e hospedá-lo gratuitamente na nuvem
+- [ ] Projeto jogo de cara ou coroa
+- [ ] Projeto de chatbot (perguntas e ajudar em tarefas)
+- [ ] Projeto de advinhação (objetos, cores e etc)
+- [ ] Upgrade do projeto das passwords e criar um gereciamento para as passes
 
 <br>
 
@@ -47,3 +51,8 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de Tetris
 - [ ] Projeto em Python de jogo multiplayer on-line
 - [ ] Projeto em Python do jogo Space Invaders
+- [ ] Projeto de um aplicativo lista de tarefas
+- [ ] Projeto de um aplicativo de gerenciamneto financeiro (
+ controlar suas finanças pessoais, permitindo que você adicione e categorize suas
+ despesas e receitas)
+- [ ] Projeto de um aplicativo de lista de compras
