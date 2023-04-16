@@ -1,7 +1,5 @@
 import qrcode
 
-# Preciso adicionar o "import os"
-
 link_texto = str(input('Insira o site/texto que quer: '))
 print('Site/texto gravado \n')
 
