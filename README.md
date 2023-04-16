@@ -4,6 +4,11 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
  - Qual quer bug encontrado deve reportar o mais rapido possivel
  - Os scripts que não foram feitos serão postados aos poucos
  
+## Dependencias necessarias:
+ - pip install pyzbar
+ - pip install opencv-python
+
+
 ## Sistemas Operativos usados:
  - Linux
 

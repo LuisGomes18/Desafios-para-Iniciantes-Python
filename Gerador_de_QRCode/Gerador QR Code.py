@@ -1,35 +1,30 @@
 import qrcode
 import shutil
+import os
 
-caminho_final = '/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador_de_QRCode/Fotos/'
-caminho_atual = '/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador_de_QRCode/'
+diretorio = 'Fotos'
 
-link_texto = str(input('Insira o site/texto que quer: '))
-print('Site/texto gravado \n')
+if not os.path.exists(diretorio):
+    os.makedirs(diretorio)
 
-nome_ficheiro = str(input('Insira o nome do arquivo: '))
-print('Nome do arquivo gravado \n')
+texto = str(input('Escreva o site/texto: '))
+nome_ficherio = str(input('\nQual sera o nome da foto: '))
+formato_imagem = int(input('\nQual sera tipo de imagem: \n1 --> Para ficheiros "png" \n2 --> Para ficheiros "jpeg" \n3 '
+                           'Para ficheiros "jpg"\n--> '))
 
-tipo_imagem = int(input(
-    'Insira  qual tipo de imagem: \n1 --> Para ficheiros "png" \n2 --> Para ficheiros "jpeg" \n3 --> Para ficheiros '
-    '"jpg"\n--> '))
-print('Tipo de imagem gravado')
-
-formato_imagem = ""
-if tipo_imagem == 1:
+if formato_imagem == 1:
     formato_imagem = "png"
-elif tipo_imagem == 2:
+elif formato_imagem == 2:
     formato_imagem = "jpeg"
-elif tipo_imagem == 3:
+elif formato_imagem == 3:
     formato_imagem = "jpg"
 
-print('\nA gerar seu QR Code')
-img = qrcode.make(link_texto)
+nome_ficherio_final = nome_ficherio + '.' + formato_imagem
+caminho_ficheiro = f'/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador de QRCode/{nome_ficherio_final}'
+caminho_final = '/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador de QRCode/Fotos/'
+img = qrcode.make(texto)
+img.save(nome_ficherio_final)
 
-img.save(f"{nome_ficheiro}.{formato_imagem}")
+shutil.move(caminho_ficheiro, caminho_final)
 
-caminho_atual_final = caminho_atual + f"{nome_ficheiro}.{formato_imagem}"
-shutil.move(caminho_atual_final, caminho_final)
-
-print('Qr Code guardado em seu pc')
-print('Obrigado por usar')
+print('QRCode guardo')
