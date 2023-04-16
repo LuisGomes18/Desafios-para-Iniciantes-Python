@@ -31,7 +31,9 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de renomeador de arquivos em massa
 - [ ] Projeto em Python de previsão do tempo
 - [ ] Programar um bot do Discord com Python e hospedá-lo gratuitamente na nuvem
+
 <br>
+
 - [ ] Projeto em Python de solucionador de Sudoku
 - [ ] Projeto de Mad Libs em Python
 - [ ] Projeto em Python do jogo da Forca
