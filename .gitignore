@@ -131,4 +131,4 @@ dmypy.json
 *.png
 .idea/
 *.txt
-ChatBOT/bot.py
+bot.py
