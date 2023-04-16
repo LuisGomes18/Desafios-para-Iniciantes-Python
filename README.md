@@ -34,7 +34,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto jogo de cara ou coroa
 - [ ] Projeto de chatbot (perguntas e ajudar em tarefas)
 - [ ] Projeto de advinhação (objetos, cores e etc)
-- [ ] Upgrade do projeto das passwords e criar um gereciamento para as passes
+- [ ] Upgrade do projeto das passwords e criar um gereciamento para as passwords
 
 <br>
 
