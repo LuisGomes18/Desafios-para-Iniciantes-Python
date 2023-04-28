@@ -29,7 +29,7 @@ if esc == 1:
             print(f'Tentativa {tentativa}/3\n' + normal)
         elif escolha not in cores:
             print(amarelo + 'Resposta invalida\n' + normal)
-if esc == 2:
+elif esc == 2:
     print('Estas são os itens do jogo')
     for e in comida:
         print(f'--> {e}')
@@ -46,3 +46,4 @@ if esc == 2:
             print(f'Tentativa {tentativa}/3\n' + normal)
         elif escolha not in comida:
             print(amarelo + 'Resposta invalida\n' + normal)
+    
