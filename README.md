@@ -7,6 +7,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 ## Dependencias necessarias:
  - pip install pyzbar
  - pip install opencv-python
+ - pip install googletrans==4.0.0-rc1
 
 
 ## Sistemas Operativos usados:
@@ -35,6 +36,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto de chatbot (perguntas e ajudar em tarefas)
 - [ ] Projeto de advinhação (objetos, cores e etc)
 - [ ] Upgrade do projeto das passwords e criar um gereciamento para as passwords
+- [ ] Projeto de tradução
 
 <br>
 
