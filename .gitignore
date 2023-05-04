@@ -132,3 +132,4 @@ dmypy.json
 .idea/
 *.txt
 bot.py
+.vscode/launch.json
