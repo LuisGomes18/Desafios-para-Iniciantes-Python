@@ -5,9 +5,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
     - Os scripts que não foram feitos serão postados aos poucos
  
 ## Dependencias necessarias:
-    - pip install pyzbar
-    - pip install opencv-python
-    - pip install googletrans==4.0.0-rc1
+    - pip install
 
 
 ## Sistemas Operativos usados:

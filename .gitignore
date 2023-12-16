@@ -5,3 +5,4 @@
 *.png
 *.jpeg
 *.jpg
+!requirements.txt
