@@ -2,8 +2,8 @@ from cv2 import imread
 from pyzbar.pyzbar import decode
 
 
-caminho = str(input('Insira o caminho da foto: '))
-img = imread(caminho)
+CAMINHO = str(input('Insira o caminho da foto: '))
+img = imread(CAMINHO)
 decoded_objects = decode(img)
 
 for obj in decoded_objects:
