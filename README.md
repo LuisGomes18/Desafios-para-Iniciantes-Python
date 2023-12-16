@@ -1,22 +1,21 @@
 # Desafio para Iniciantes Python  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
 
 Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.org/portuguese/news/25-projetos-em-python-para-iniciantes-ideias-faceis-para-comecar-a-programar-em-python/)
- - Qual quer bug encontrado deve reportar o mais rapido possivel
- - Os scripts que não foram feitos serão postados aos poucos
+    - Qual quer bug encontrado deve reportar o mais rapido possivel
+    - Os scripts que não foram feitos serão postados aos poucos
  
 ## Dependencias necessarias:
- - pip install pyzbar
- - pip install opencv-python
- - pip install googletrans==4.0.0-rc1
+    - pip install pyzbar
+    - pip install opencv-python
+    - pip install googletrans==4.0.0-rc1
 
 
 ## Sistemas Operativos usados:
- - Linux
+    - Linux
 
 ## Material usados:
- - ~~Visual Studio Code~~
- - Pycharm
- - Colab
+    - Visual Studio Code
+    - Colab
 
 ## Lista dos desafios
 
@@ -54,7 +53,5 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de jogo multiplayer on-line
 - [ ] Projeto em Python do jogo Space Invaders
 - [ ] Projeto de um aplicativo lista de tarefas
-- [ ] Projeto de um aplicativo de gerenciamneto financeiro (
- controlar suas finanças pessoais, permitindo que você adicione e categorize suas
- despesas e receitas)
+- [ ] Projeto de um aplicativo de gerenciamneto financeiro (controlar suas finanças pessoais, permitindo que você adicione e categorize suas despesas e receitas)
 - [ ] Projeto de um aplicativo de lista de compras
