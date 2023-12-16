@@ -1,49 +1,49 @@
-import random
+from random import choice
 
 cores = ['vermelho', 'laranja', 'amarelo', 'verde', 'azul', 'rosa', 'roxo']
 comida = ['esparguete', 'macarrão', 'arroz', 'bife', 'fiambre', 'queijo']
-tentativa = 0
-vermelho = '\033[31m'
-amarelo = '\033[33m'
-verde = '\033[32m'
-normal = '\033[0;0m'
+TENTATIVA = 0
 
-esc = int(input('''Escolhe qual categoria que:\n
+esc = int(input('''\nEscolhe qual categoria que:\n
 1) Cores
 2) Comida
 --> '''))
+
 if esc == 1:
-    print('Estas são os itens do jogo')
+    print('\nEstas são os itens do jogo')
     for e in cores:
-        print(f'--> {e}')
-    print('\n')
-    escolha_ai = random.choice(cores)
-    while tentativa < 3:
-        escolha = str(input('Qual sua jogada: '))
-        if escolha_ai == escolha:
-            print(verde + 'Voce acertou\n' + normal)
+        print(f'-> {e}')
+
+    escolha_geral = choice(cores)
+
+    while TENTATIVA < 3:
+        ESCOLHA = str(input('Qual sua jogada: '))
+        ESCOLHA = ESCOLHA.lower()
+        if escolha_geral == ESCOLHA:
+            print('Voce acertou')
             break
-        elif escolha_ai != escolha and escolha in cores:
-            print(vermelho + 'Voce errou')
-            tentativa += 1
-            print(f'Tentativa {tentativa}/3\n' + normal)
-        elif escolha not in cores:
-            print(amarelo + 'Resposta invalida\n' + normal)
-elif esc == 2:
+        elif escolha_geral != ESCOLHA and escolha_geral in cores:
+            print('\nVoce errou')
+            TENTATIVA += 1
+            print(f'TENTATIVA {TENTATIVA}\n')
+        else:
+            print('Resposta invalida\n')
+
+if esc == 2:
     print('Estas são os itens do jogo')
     for e in comida:
-        print(f'--> {e}')
-    print('\n')
-    escolha_ai = random.choice(comida)
-    while tentativa < 3:
-        escolha = str(input('Qual sua jogada: '))
-        if escolha_ai == escolha:
-            print(verde + 'Voce acertou\n' + normal)
-            break
-        elif escolha_ai != escolha and escolha in comida:
-            print(vermelho + 'Voce errou')
-            tentativa += 1
-            print(f'Tentativa {tentativa}/3\n' + normal)
-        elif escolha not in comida:
-            print(amarelo + 'Resposta invalida\n' + normal)
-    
+        print(f'-> {e}')
+
+    escolha_geral = choice(comida)
+
+    while TENTATIVA < 3:
+        ESCOLHA = str(input('Qual sua jogada: '))
+        ESCOLHA = ESCOLHA.lower()
+        if escolha_geral == ESCOLHA:
+            print('Voce acertou')
+        elif escolha_geral != ESCOLHA and escolha_geral in comida:
+            print('\nVoce errou')
+            TENTATIVA += 1
+            print(f'TENTATIVA {TENTATIVA}\n')
+        else:
+            print('Resposta invalida\n')
