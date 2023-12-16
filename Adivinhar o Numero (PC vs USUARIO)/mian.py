@@ -13,6 +13,7 @@ while N < 5:
 
     print(f'\nNúmero escolhido por AI 1: {numero_escolhido_AI_1}')
     print(f'Número escolhido por AI 2: {numero_escolhido_Usuario}')
+    
     if numero_escolhido_AI_1 == numero_escolhido_Usuario:
         print('Empate')
     elif numero_escolhido_AI_1 > numero_escolhido_Usuario:
