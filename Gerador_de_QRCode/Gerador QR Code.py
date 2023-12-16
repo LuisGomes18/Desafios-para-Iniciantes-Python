@@ -1,30 +1,29 @@
+from os import path
+from os import makedirs
+from os import rmdir
 import qrcode
-import shutil
-import os
 
-diretorio = 'Fotos'
 
-if not os.path.exists(diretorio):
-    os.makedirs(diretorio)
+if path.exists('Gerador_de_QRCode/Fotos'):
+    rmdir('Gerador_de_QRCode/Fotos')
+if not path.exists('Gerador_de_QRCode/Fotos'):
+    makedirs('Gerador_de_QRCode/Fotos')
 
-texto = str(input('Escreva o site/texto: '))
-nome_ficherio = str(input('\nQual sera o nome da foto: '))
-formato_imagem = int(input('\nQual sera tipo de imagem: \n1 --> Para ficheiros "png" \n2 --> Para ficheiros "jpeg" \n3 '
-                           'Para ficheiros "jpg"\n--> '))
+TEXTO = str(input('Escreva a mensagem do QRCode: '))
+NOME_FICHEIRO = str(input('\nQual sera o nome da foto: '))
+formato_imagem = int(input('''\nQual sera tipo de imagem:
+1 --> Para ficheiros "png"
+2 --> Para ficheiros "jpeg" 
+3 --> Para ficheiros "jpg"
+-> '''))
 
 if formato_imagem == 1:
-    formato_imagem = "png"
+    FORMATO_IMAGEM_FINAL = ".png"
 elif formato_imagem == 2:
-    formato_imagem = "jpeg"
+    FORMATO_IMAGEM_FINAL = ".jpeg"
 elif formato_imagem == 3:
-    formato_imagem = "jpg"
+    FORMATO_IMAGEM_FINAL = ".jpg"
 
-nome_ficherio_final = nome_ficherio + '.' + formato_imagem
-caminho_ficheiro = f'/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador de QRCode/{nome_ficherio_final}'
-caminho_final = '/home/luis/Desktop/Projetos_Python/Desafios-para-Iniciantes-Python/Gerador de QRCode/Fotos/'
-img = qrcode.make(texto)
-img.save(nome_ficherio_final)
-
-shutil.move(caminho_ficheiro, caminho_final)
-
-print('QRCode guardo')
+NOME_FICHEIRO_FINAL = NOME_FICHEIRO + FORMATO_IMAGEM_FINAL
+img = qrcode.make(TEXTO)
+img.save(f'Gerador_de_QRCode/Fotos/{NOME_FICHEIRO_FINAL}')
