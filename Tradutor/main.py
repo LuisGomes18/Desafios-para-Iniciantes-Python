@@ -1,15 +1,18 @@
-from googletrans import Translator
-import json
+from googletrans import Translator, LANGUAGES
+import asyncio
 
-with open("Linguas.json", "r") as dt:
-    data = json.load(dt)
 
-translator = Translator()
-lingua = str(input('Insira qual lingua do texto: '))
-traduzir_lingua = translator.translate(lingua, dest='en').text
-print(traduzir_lingua)
+async def main():
+    translator = Translator()
 
-'''texto = str(input('Insira o que quer traduzir: '))
-translated_text = translator.translate(texto, src=f'{traduzir_lingua}', dest='pt').text
-print(translated_text)'''
+    texto = input('\nQual o texto que quer traduzir: ')
+    lingua = str(input('Insira qual lingua para traduzir: '))
+    while lingua not in list(LANGUAGES.keys()):
+        print('Língua inválida! Tente novamente.')
+        lingua = str(input('Insira qual lingua para traduzir: '))
 
+    traduzir_lingua = await translator.translate(texto, dest=lingua)
+    print(f'\nTexto Traduzido : {traduzir_lingua.text}')
+
+
+asyncio.run(main())
