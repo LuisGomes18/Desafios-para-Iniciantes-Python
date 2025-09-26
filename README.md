@@ -16,7 +16,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de contagem regressiva
 - [x] Projeto em Python de geração de senhas
 - [x] Projeto em Python de codificador/decodificador de QR code
-- [ ] Projeto em Python de pesquisa binária
+- [x] Projeto em Python de pesquisa binária
 - [ ] Projeto em Python de criador de textos com cadeias de Markov
 - [ ] Projeto em Python de programa de web scraping
 - [ ] Projeto em Python de renomeador de arquivos em massa
@@ -24,7 +24,7 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Programar um bot do Discord com Python e hospedá-lo gratuitamente na nuvem
 - [x] Projeto jogo de cara ou coroa (usuario vs usuario em breve)
 - [ ] Projeto de chatbot (perguntas e ajudar em tarefas)
-- [ ] Projeto de advinhação (objetos, cores e etc)
+- [x] Projeto de advinhação (objetos, cores e etc)
 - [x] Projeto de tradução
 
 <br>
