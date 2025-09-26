@@ -1,25 +1,18 @@
-# Desafio para Iniciantes Python  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+# Desafio para Iniciantes Python  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="">
 
 Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.org/portuguese/news/25-projetos-em-python-para-iniciantes-ideias-faceis-para-comecar-a-programar-em-python/)
     - Qual quer bug encontrado deve reportar o mais rapido possivel
     - Os scripts que não foram feitos serão postados aos poucos
- 
-## Dependencias necessarias:
-    - pip install
 
+## Dependencias necessarias
 
-## Sistemas Operativos usados:
-    - Linux
-
-## Material usados:
-    - Visual Studio Code
-    - Colab
+    - pip install -r requirements.txt
 
 ## Lista dos desafios
 
 - [x] Projeto do jogo Adivinhe o Número em Python (computador)
 - [x] Projeto do jogo Adivinhe o Número em Python (usuário)
-- [x] Projeto em Python de Pedra, papel e tesoura (player contra player não sera finalizado ainda)
+- [x] Projeto em Python de Pedra, papel e tesoura
 - [ ] Projeto em Python de contagem regressiva
 - [x] Projeto em Python de geração de senhas
 - [x] Projeto em Python de codificador/decodificador de QR code
@@ -29,11 +22,10 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de renomeador de arquivos em massa
 - [ ] Projeto em Python de previsão do tempo
 - [ ] Programar um bot do Discord com Python e hospedá-lo gratuitamente na nuvem
-- [x] Projeto jogo de cara ou coroa (player contra player não sera finalizado ainda)
+- [x] Projeto jogo de cara ou coroa (usuario vs usuario em breve)
 - [ ] Projeto de chatbot (perguntas e ajudar em tarefas)
 - [ ] Projeto de advinhação (objetos, cores e etc)
-- [ ] Upgrade do projeto das passwords e criar um gereciamento para as passwords
-- [ ] Projeto de tradução
+- [x] Projeto de tradução
 
 <br>
 
@@ -51,5 +43,6 @@ Scripts criados com os exercicios [Página Exercicios](https://www.freecodecamp.
 - [ ] Projeto em Python de jogo multiplayer on-line
 - [ ] Projeto em Python do jogo Space Invaders
 - [ ] Projeto de um aplicativo lista de tarefas
-- [ ] Projeto de um aplicativo de gerenciamneto financeiro (controlar suas finanças pessoais, permitindo que você adicione e categorize suas despesas e receitas)
+- [ ] Projeto de um aplicativo de gerenciamneto financeiro
+(controlar suas finanças pessoais, permitindo que você adicione e categorize suas despesas e receitas)
 - [ ] Projeto de um aplicativo de lista de compras
