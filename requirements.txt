@@ -2,3 +2,4 @@ qrcode
 opencv-python
 pyzbar
 pillow
+googletrans
